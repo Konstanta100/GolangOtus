@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    container_name: golang_otus
+    image: golang:1.23
+    volumes:
+      - .:/go/src/GolangOtus
+    working_dir: /go/src/GolangOtus
+    ports:
+      - "8090:8090"
+    command: go run main.go
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
+
