@@ -1,0 +1,5 @@
+# VSCode
+.vscode/
+/.idea
+/.env.local
+/.env.*.local
